@@ -43,6 +43,15 @@ public class TestGreeter {
     String someone = "World, Thanks you, Build trigger Automatically";
 
     assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+  }
+
+
+  @Test
+  public void greetShouldIncludeGreetingMessagePollSCM() {
+    String someone = "World, Thanks you, PollSCM";
+
+    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+
 
   }
 }
